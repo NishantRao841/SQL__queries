@@ -27,6 +27,22 @@ select ct,name,ct.population from city as ct
 join
 country as ctry
 where ct.countrycode=ctry.code;
+use sakila;
+select * from actor;
+select * from film_actor;
+select a.first_name, a.actor_id from actor as a;
+
+select a.first_name, a.actor_id from actor as a
+join film_actor as fa
+where a.actor_id=fa.actor_id;
+select fa.actor_id,fa.film_id from film_actor as fa;
+
+select * from film;
+select fa.film_id,fa.actor_id from film_actor as fa;
+select fa.film_id,fa.actor_id, f.film_id,f.title from film_actor as fa
+join  film as f
+where fa.film_id= f.film_id;
+
 
 
 
